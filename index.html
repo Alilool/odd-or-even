@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Even or Odd</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins&family=Roboto+Mono:wght@500&display=swap');
+
+        body {
+            background-color: #4f358d;
+            color: white;
+            text-align: center;
+            font-family: 'Roboto Mono', monospace;
+
+        }
+
+        button {
+            background-color: #FD8E4A;
+            border: solid #f0ebbb 2px;
+            color: white;
+            font-size: 30px;
+            border-radius: 40px;
+            padding: 10px 20px;
+            margin: 20px 30px;
+            font-family: 'poppins', sans-serif;
+        }
+
+        button:hover {
+            background-color: #e58041;
+            cursor: pointer;
+        }
+
+        .userData {
+            background-color: #53567B;
+            max-width: 400px;
+            margin: auto;
+            border-radius: 20px;
+            padding: 2px;
+            font-size: 20px;
+            border: #7278AF solid;
+            display: flex;
+            justify-content: space-around;
+            margin-top: 50px;
+        }
+
+        .question {
+            font-size: 20px;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: space-around;
+            max-width: 400px;
+            margin: auto;
+        }
+
+        #heading {
+            margin-top: 16vh;
+            color: yellow;
+            text-shadow: white 1px 1px 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="heading">Even or odd game 😉</h1>
+    <div class="container">
+        <div class="userData">
+            <p>Attempts</p>
+            <p id="attemp">0</p>
+        </div>
+        <div class="userData">
+            <p>Score</p>
+            <p id="score">0</p>
+        </div>
+        <div class="userData">
+            <p>Win percentage</p>
+            <p id="win">0%</p>
+        </div>
+
+        <p class="question">I think of a number do you think it's odd or even?</p>
+        <div class="buttons">
+            <button onclick="guess('Odd')">Odd</button>
+            <button onclick="guess('Even')">Even</button>
+        </div>
+
+    </div>
+
+    <audio id="correctSFX" src="./correct.mp3"></audio>
+    <audio id="wrongSFX" src="./wrong.mp3"></audio>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
